@@ -1,0 +1,515 @@
+/* ----------------------------------------------------------------- GLOBAL ---- */
+.app-loading-container{
+    position: fixed;
+    z-index: 1000000;
+    width: 100%;
+    height: 100%;
+    background: #ffffffe6;
+    display: none;
+}
+
+.app-loading-spinner{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ff6783 !important;
+}
+
+.app-loading-spinner > .ant-spin-text {
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+.control-tab > .ant-spin-spinning{
+    display: flex;
+    justify-content: center;
+}
+
+.control-tab > .ant-spin-spinning > .ant-spin-text{
+    margin-left: 10px;
+    color: #ff6783 !important;
+
+}
+
+/* Theme color*/
+/* Buttons*/
+.ant-btn-primary {
+    background: #ff6783 !important;
+    border-color: #ff6783 !important;
+}
+
+/* link*/
+a:active, .link, .link-active {
+    color: #ff6783 !important;
+}
+
+/* link hovering, active*/
+a:hover {
+    color: #9d122d !important;
+}
+
+a {
+    color: #494949;
+}
+
+
+.safeArea {
+    padding-top: 71px !important;
+}
+
+.button {
+    height: 37px;
+    padding: 0px 20px 0px 43px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+
+    background-size: 21px;
+    background-repeat: no-repeat;
+    background-position: 16px center;
+
+    box-shadow: rgba(16 16 17 0.11) 0px 3px 6px 3px;
+    border-radius: 200px;
+
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+.center-cropped {
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    height: 12vh;
+    width: 12vh;
+}
+
+
+/* Header styling START*/
+.header {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(16, 16, 17, 0.2) 0px 1px 2px, rgba(16, 16, 17, 0.1) 0px 3.4px 8px, rgba(16, 16, 17, 0) 0px 12px 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    height: 70px;
+
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+
+.ql-editor {
+    height: 100px !important;
+}
+
+.logo {
+    margin: 10px;
+}
+
+/* ant menu*/
+.ant-menu {
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.ant-menu-horizontal {
+    border-bottom: 0px;
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected {
+    color: #ff6783;
+}
+
+.ant-menu-horizontal > .ant-menu-item-selected a {
+    color: #ff6783;
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after, .ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
+    border-bottom: 0px;
+}
+
+.ant-menu-light .ant-menu-item:hover, .ant-menu-light .ant-menu-item-active, .ant-menu-light .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open, .ant-menu-light .ant-menu-submenu-active, .ant-menu-light .ant-menu-submenu-title:hover {
+    color: inherit;
+}
+
+.ant-menu {
+    color: #494949;
+    font-weight: 600;
+}
+
+/*  right menu item align reight*/
+.right-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Header styling END*/
+
+
+/* Footer styling START*/
+.footer {
+    background-color: rgb(183, 183, 183);
+    padding-left: 100px;
+    padding-right: 100px;
+
+    width: 100%;
+    height: 50px;
+
+    position: fixed;
+    bottom: 0;
+}
+
+.footer > .ant-col-24 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+
+/* Footer styling END*/
+
+
+.ant-input-prefix {
+    margin-right: 10px !important;
+}
+
+.anticon-edit {
+    color: #ff6783;
+}
+
+.ant-input:focus, .ant-input-focused, .ant-input:hover {
+    border-color: #ff6783;
+    /*box-shadow: 0 0 0 2px rgba(255, 120, 117, 0.23);*/
+}
+
+.ant-upload.ant-upload-select-picture-card:hover, .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+    border-color: #ff6783;
+}
+
+html {
+    --antd-wave-shadow-color: #ff6783;
+}
+
+::selection {
+    background: #ff6783;
+}
+
+.ant-input-affix-wrapper:focus, .ant-input-affix-wrapper-focused {
+    box-shadow: 0 0 0 2px rgba(255, 120, 117, 0.23);
+}
+
+
+.clickable-text {
+    color: #1890ff !important;
+}
+
+.clickable-text:hover, .clickable-text:active {
+    color: #096dd9 !important;
+}
+
+
+.danger-text {
+    color: #ff4d4f !important;
+}
+
+.danger-text:hover, .danger-text:active {
+    color: #983133 !important;
+}
+
+
+html {
+    background: #f9f9f5;
+    height: 100%;
+}
+
+/* ----------------------------------------------------------------- GLOBAL ---- */
+
+
+/* ----------------------------------------------------------------- LOGIN/SIGNUP ---- */
+.login-page {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.login-page-left {
+    background-color: #fff4f6;
+    z-index: 1;
+}
+
+.login-page-right {
+    background: url("assets/login-bg.svg");
+    z-index: 1;
+}
+
+#login-form {
+    background-color: #ffffff;
+    width: 50%;
+    border-radius: 20px;
+    box-shadow: rgba(16, 16, 17, 0.18) -2px -2px 17px 8px;
+    padding: 60px;
+}
+
+/* ----------------------------------------------------------------- LOGIN/SIGNUP ---- */
+
+/* ----------------------------------------------------------------- Landing ---- */
+.Landing-background {
+    background-color: wheat;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Landing-text-padding {
+    padding-right: 80px;
+}
+
+/* ----------------------------------------------------------------- Landing ---- */
+
+/* ----------------------------------------------------------------- Profile ---- */
+.profilePage {
+    background: #f9f9f5;
+    padding: 30px 39px 0px calc(166px);
+    height: 100vh;
+}
+
+
+.postPage {
+    background: #f9f9f5;
+    padding: 30px 39px 0px 19px;
+    height: 100vh;
+}
+
+
+.profileContainer {
+    margin: 20px 0px 0px 0px;
+
+    position: fixed;
+    width: 22.5%;
+}
+
+.profileCard {
+    box-shadow: rgba(16, 16, 17, 0.06) -2px -2px 10px 8px;
+    padding: 70px 30px 70px 30px;
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 10px;
+    background-color: #ffffff;
+
+}
+
+.postContainer {
+    margin: 20px 0px 100px 20px;
+}
+
+.postContainer > .ant-card {
+    margin-bottom: 10px;
+}
+
+
+.postAvatar {
+
+    box-shadow: rgba(16, 16, 17, 0.15) 0px 0px 0px 1px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.postImageGroup {
+    margin: 20px 0px 20px 0px;
+}
+
+.postImageGroup > .ant-image {
+    margin-right: 10px;
+}
+
+
+.ant-popover.ant-popconfirm.ant-popover-placement-bottom {
+    max-width: 400px;
+}
+
+.infoContainer {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.discoverFriendContainer {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.discoverFriendProfile {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.discoverFriendBtn {
+    margin-right: 0px;
+    margin-left: auto;
+}
+
+.profilePageAvatar > .ant-avatar-string {
+    top: 0px;
+    margin-left: 3px;
+}
+
+.postAvatar > .ant-avatar-string {
+    top: 0px;
+}
+
+/* ----------------------------------------------------------------- Profile ---- */
+.ant-comment-actions {
+    margin-top: 39px;
+}
+
+.ant-comment-actions > li {
+    width: 100%;
+}
+
+#upload-loading-spinner {
+    margin-top: 20px;
+}
+
+#upload-loading-spinner > .ant-spin-text {
+    margin-left: 10px;
+}
+
+#upload-loading-spinner > .ant-spin-text, #upload-loading-spinner {
+    color: #ff6783 !important;
+
+}
+
+replyinput > .ant-comment > .ant-comment-inner > .ant-comment-avatar {
+    display: none !important;
+}
+
+.reply-input-box > .ant-form-item {
+    margin-bottom: 0px !important;
+}
+
+.ant-comment-content-detail, .ant-comment-content-author {
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-right: 145px;
+}
+
+.ant-comment-content-author {
+    margin-top: 9px;
+}
+
+.ant-comment-actions {
+    margin-top: 18px;
+}
+
+
+/* Reaction */
+.reply {
+    padding: 8px;
+    /*border-radius: 6px;*/
+    /*color: rgb(101 101 101 / 85%);*/
+    /*background-color: rgb(0 0 0 / 6%);*/
+}
+
+.reaction {
+    margin: 0px 20px 0px 0px;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.reaction-like {
+    transition: 0.3s;
+    color: #1890ff;
+    border: 1px solid rgba(24, 144, 255, 0);
+}
+
+.reaction-dislike {
+    transition: 0.3s;
+    color: #ff4d4f;
+    border: 1px solid rgba(255, 77, 79, 0);
+}
+
+.reaction-star {
+    transition: 0.3s;
+    color: #faad14;
+    border: 1px solid rgba(250, 173, 20, 0);
+
+}
+
+.reaction-like:hover, .reaction-dislike:hover, .reaction-star:hover {
+    background: #9292921a;
+}
+
+.reaction-has-like{
+    transition: 0.3s;
+    background: rgba(24, 144, 255, 0.15);
+    border: 1px solid #1890ff;
+}
+
+.reaction-has-dislike{
+    transition: 0.3s;
+    background: rgba(255, 77, 79, 0.15);
+    border: 1px solid #ff4d4f;
+}
+
+.reaction-has-star {
+    transition: 0.3s;
+    background: rgba(250, 173, 20, 0.15);
+    border: 1px solid #faad14;
+}
+
+/* Follow */
+.follow-btn {
+    font-size: 14px;
+    position: absolute;
+    right: 24px;
+    top: -10px;
+    padding: 8px;
+    color: #fe6783;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid #fe6783;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.has-follow, .follow-btn:hover {
+    color: #fe6783;
+    border: 1px solid #fe6783;
+    background: #fe678329;
+}
+
+.clickable {
+    color: #1890ff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.ant-message-custom-content.ant-message-success {
+    display: flex;
+}
+
+
+.ant-spin-dot-item{
+    color: #fe6783;
+    background-color: #fe6783;
+}
+
+.ant-message{
+    padding-top: 66px;
+}
